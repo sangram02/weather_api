@@ -1,0 +1,102 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- navbar  -->
+    <div class="container-fluid main_menu">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                        <a class="navbar-brand" href="/">GetWeather</a>
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                            <ul class="navbar-nav">
+                                <li class="nav-item">
+                                    <a class="nav-link" aria-current="page" href="/">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/weather">Weather</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="/about">About</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!-- main header  -->
+    <div class="container-fluid main_header">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <div class="main_content">
+                    <form action="" class="temp_form">
+                        <input type="text" name="" id="cityname" placeholder="Enter your City Name" autocomplete="off">
+                        <input type="submit" value="search" id="submitBtn">
+                    </form>
+                </div>
+                <div class="tempInformation">
+                    <div class="top_layer">
+                        <p id="day">Tuesday</p>
+                        <p id="today_data">1 April</p>
+                    </div>
+                    <div class="main_layer ">
+                        <p id="city_name">Get otput</p>
+                        <div class="middle_layer data_hide">
+                            <p id="temp"><span id="temp_val">23</span><sup>o</sup>C</p>
+                            <p id="temp_status"><i class="bi bi-cloud-fill"></i></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- footer -->
+    <footer>
+        <p>created by ❤️Sangram</p>
+    </footer>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+
+    const day = document.getElementById('day'); 
+
+        const getcurday = () =>{
+    const weekday = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+    var curtime = new Date();
+    let days = weekday[curtime.getDay()];  
+    day.innerText = days;
+}
+      getcurday();
+
+     const dates = document.getElementById('today_data');
+      const getcurtime = () =>{
+    var months = ["January","February","March","April","May","June","July","August","September","October","November","December"]
+    var curtime = new Date();
+    var month = curtime.getMonth();
+    var date = curtime.getDate();
+    let setmonth = months[month];
+
+    dates.innerHTML = date + " " + months[month];
+}
+      getcurtime();
+    </script>
+</body>
+
+</html>

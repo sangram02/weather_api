@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- navbar  -->
+    <div class="container-fluid main_menu">
+        <div class="row">
+            <div class="col-md-10 col-12 mx-auto">
+                <nav class="navbar navbar-expand-lg">
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="/">GetWeather</a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                            <a class="nav-link" aria-current="page" href="/">Home</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/weather">Weather</a>
+                          </li>
+                          <li class="nav-item">
+                            <a class="nav-link" href="/about">About</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
+            </div>
+        </div>
+    </div>
+    <!-- main header  -->
+    <div class="container-fluid main_header">
+      <div class="row">
+        <div class="col-md-10 col-12 mx-auto">
+          <div class="row">
+            <!-- left side header  -->
+            <div class="col-md-6 col-12 main_header_left">
+               <p>Welcome to <span class="text_clr">Weather</span> app</p>
+               <h1>Get the Latest <span class="text_clr">Weather</span> info of Your City</h1>
+               <a href="/weather"><button class="btn btn-primary">Check now</button></a>
+            </div>
+            <!-- right side header  -->
+            <div class="col-md-6 col-12 main_header_right">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="weather-n56.jpg" class="d-block h-25 w-100 rounded-3" alt="...">
+                  </div>
+                  <div class="carousel-item rounded-2">
+                    <img src="https://cdn.dribbble.com/users/5952485/screenshots/19319195/media/0dfd3101c49c30b2527b7cdf1faaaf80.png?compress=1&resize=450x338&vertical=top" class="d-block h-25 w-100 rounded-4" alt="...">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="https://cdn.dribbble.com/userupload/4051094/file/original-7e367b49cc5bab810e4f0b901c3deb10.jpg?compress=1&resize=450x338&vertical=top" class="d-block h-25 w-100 rounded-4" alt="...">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- footer -->
+    <footer>
+      <p>created by ❤️Sangam</p>
+    </footer>
+    <script src="./index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
