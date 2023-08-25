@@ -3,7 +3,7 @@ const app = express();
 const hbs = require('hbs');
 
 const port = 3000;
-const hostname = '127.0.0.1';
+const hostname = '0.0.0.0';
 
 app.set('view engine','hbs')
 app.use(express.static("./Static"))
